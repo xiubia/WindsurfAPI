@@ -18,6 +18,7 @@ COPY install-ls.sh setup.sh .env.example ./
 
 RUN sed -i 's/\r$//' install-ls.sh setup.sh \
     && chmod +x install-ls.sh setup.sh \
+    && bash ./install-ls.sh \
     && mkdir -p /data /opt/windsurf/data/db /tmp/windsurf-workspace
 
 EXPOSE 3003
